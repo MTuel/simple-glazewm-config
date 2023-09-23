@@ -22,10 +22,10 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "5px"
+  inner_gap: "0px"
 
   # Gap between windows and the screen edge.
-  outer_gap: "10px"
+  outer_gap: "0px"
 
 # Highlight active/inactive windows with a colored border.
 # ** Exclusive to Windows 11 due to API limitations.
@@ -208,8 +208,8 @@ keybindings:
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
-  - command: "exec cmd"
-    binding: "Alt+Enter"
+  - command: "exec wt"
+    binding: "Ctrl+Alt+T"
 
   # Focus the workspace that last had focus.
   - command: "focus workspace recent"
