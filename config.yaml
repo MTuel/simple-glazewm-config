@@ -18,7 +18,7 @@ general:
   # *Strongly* recommended to set to 'false'. Whether to globally enable/disable
   # window transition animations (on minimize, close, etc). Set to 'unchanged'
   # to make no setting changes.
-  window_animations: true
+  window_animations: false
 
 gaps:
   # Gap between adjacent windows.
@@ -45,7 +45,7 @@ bar:
   background: "#20242cc4"
   foreground: "#ffffff"
   font_family: "Segoe UI"
-  font_size: "13px"
+  font_size: "12px"
   padding: "4px 6px"
   offset_x: "0"
   offset_y: "0"
@@ -58,9 +58,9 @@ bar:
   components_center:
     - type: "window title"
   components_right:
-    - type: "system tray"
-      label_expand_text: "<"
-      label_collapse_text: ">"
+    #- type: "system tray"
+    #  label_expand_text: "<"
+    #  label_collapse_text: ">"
     - type: "tiling direction"
       label_horizontal: "⮂"
       label_vertical: "⮁"
@@ -76,25 +76,37 @@ bar:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
       time_formatting: "hh:mm tt  ddd MM/d/yy"
 
+# Setup for a 3 monitor workstation. 
+# Ideally, each monitor has 3 workstations attached to it, and it goes
+# 1-3 on monitor 1, 4-6 on monitor 2, 7-9 on monitor 3.
 workspaces:
   - name: "1"
-    bind_to_monitor: 1
+    bind_to_monitor: 3
+    keep_alive: true
   - name: "2"
-    bind_to_monitor: 1
+    bind_to_monitor: 3
+    keep_alive: true
   - name: "3"
-    bind_to_monitor: 1
+    bind_to_monitor: 3
+    keep_alive: true
   - name: "4"
     bind_to_monitor: 2
+    keep_alive: true
   - name: "5"
     bind_to_monitor: 2
+    keep_alive: true
   - name: "6"
     bind_to_monitor: 2
+    keep_alive: true
   - name: "7"
-    bind_to_monitor: 3
+    bind_to_monitor: 1
+    keep_alive: true
   - name: "8"
-    bind_to_monitor: 3
+    bind_to_monitor: 1
+    keep_alive: true
   - name: "9"
-    bind_to_monitor: 3
+    bind_to_monitor: 1
+    keep_alive: true
 
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
